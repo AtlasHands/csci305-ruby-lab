@@ -13,10 +13,8 @@ $bigrams = Hash.new # The Bigram data structure
 $name = "Keefer Sands"
 
 def cleanup_titles(title)
-		temp = title.split('<SEP>')
-		title = temp[2]
-		p title
-		return title
+	title = title.split('<SEP>')[2]
+	return title
 end
 # function to process each line of a file and extract the song titles
 def process_file(file_name)
